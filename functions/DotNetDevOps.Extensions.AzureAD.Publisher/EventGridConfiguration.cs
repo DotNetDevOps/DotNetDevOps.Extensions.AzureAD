@@ -10,5 +10,6 @@ namespace DotNetDevOps.Extensions.AzureAD.Publisher
         public string Endpoint { get; set; }
         public string Key { get; set; }
         public string ResourceId { get; set; }
+        public string TopicName { get; set; }
     }
 }

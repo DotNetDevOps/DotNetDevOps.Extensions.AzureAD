@@ -28,7 +28,7 @@ namespace DotNetDevOps.Extensions.AzureAD.Publisher
             TopicCredentials domainKeyCredentials = new TopicCredentials(options.Key);
             EventGridClient client = new EventGridClient(domainKeyCredentials);
 
-            @event.Topic = "mytest";
+            @event.Topic = options.TopicName;
             await client.PublishEventsAsync(domainHostname, new List<EventGridEvent> {
               @event
             });
